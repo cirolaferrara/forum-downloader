@@ -1,6 +1,7 @@
 ## Installation
 ```bash
 git clone https://github.com/cirolaferrara/forum-downloader.git
+cd forum-downloader/
 composer update
 ```
 ## Usage
