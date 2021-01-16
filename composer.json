@@ -1,0 +1,28 @@
+{
+    "name": "cirolaferrara/forum-downloader",
+    "type": "project",
+    "description": "Download files from forum using mldonkey server",
+    "keywords": [
+        "mldonkey",
+        "emulelinks",
+        "p2p"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/cirolaferrara/ed2klinks-grabber.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/cirolaferrara/mldonkey-sender.git"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "nategood/commando": "^0.4.0",
+        "cirolaferrara/mldonkey-sender": "dev-master",
+        "cirolaferrara/ed2klinks-grabber": "dev-master",
+        "ext-readline": "*"
+    }
+}
