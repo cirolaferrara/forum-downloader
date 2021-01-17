@@ -79,7 +79,7 @@ if(!$forumData) {
 $forumReader = new ForumReader($forumData);
 if(parse_url($cmd['forum-page'])['path'] == '/viewforum.php') {
     // Topic
-    $topics = $forumReader->getTopicsFromPage((string)$cmd['forum-page'], 2, $ignoreList);
+    $topics = $forumReader->getTopicsFromPage((string)$cmd['forum-page'], 1, $ignoreList);
 
     foreach($topics as $i => $topic) {
         echo ($i + 1).'. '.$topic[0].PHP_EOL;
