@@ -6,6 +6,8 @@ use Ed2kLinksGrabber\Forum\Service\ForumReader;
 use MlDonkeySender\MlDonkeySender\Data\MlDonkeyServerData;
 use MlDonkeySender\MlDonkeySender\Service\MlDonkeyServerDownload;
 
+require __DIR__ . '/vendor/autoload.php';
+
 // Ignore list
 $ignoreList = array(
     'REGOLAMENTO DI SEZIONE',
