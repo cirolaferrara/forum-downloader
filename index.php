@@ -18,7 +18,6 @@ $cmd = new Commando\Command();
 
 // Define a flag "-q" a.k.a. "--mldonkey-host"
 $cmd->option('q')
-    ->require()
     ->aka('mldonkey-host')
     ->describedAs('Mldonkey host');
 
