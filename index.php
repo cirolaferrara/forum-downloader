@@ -57,6 +57,12 @@ $cmd->option('u')
     ->aka('forum-page')
     ->describedAs('Forum page');
 
+// Define a flag "-i" a.k.a. "--forum-nopage"
+$cmd->option('i')
+    ->default(1)
+    ->aka('forum-nopage')
+    ->describedAs('Forum number of page');
+
 // Server MLDonkey
 $mldonkeyServerData = new MlDonkeyServerData();
 $mldonkeyServerData->ip = (string)$cmd['mldonkey-host'];
@@ -79,14 +85,14 @@ if(!$forumData) {
 $forumReader = new ForumReader($forumData);
 if(parse_url($cmd['forum-page'])['path'] == '/viewforum.php') {
     // Topic
-    $topics = $forumReader->getTopicsFromPage((string)$cmd['forum-page'], 1, $ignoreList);
+    $topics = $forumReader->getTopicsFromPage((string)$cmd['forum-page'], (int)$cmd['forum-nopage'], $ignoreList);
 
     foreach($topics as $i => $topic) {
         echo ($i + 1).'. '.$topic[0].' '.$topic[1].PHP_EOL;
     }
 
     echo PHP_EOL;
-    $number = readline('Enter your number: ');
+    $number = readline('Enter the number: ');
     $number--;
     $pageToDownload = (string)$topics[$number][1];
 }
