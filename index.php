@@ -82,7 +82,7 @@ if(parse_url($cmd['forum-page'])['path'] == '/viewforum.php') {
     $topics = $forumReader->getTopicsFromPage((string)$cmd['forum-page'], 1, $ignoreList);
 
     foreach($topics as $i => $topic) {
-        echo ($i + 1).'. '.$topic[0].PHP_EOL;
+        echo ($i + 1).'. '.$topic[0].' '.$topic[1].PHP_EOL;
     }
 
     echo PHP_EOL;
